@@ -1,0 +1,9 @@
+2024-10-24T12:53:32.964+05:30 DEBUG 15068 --- [InventoryService] [main] o.s.w.r.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-10-24T12:53:33.051+05:30 DEBUG 15068 --- [InventoryService] [main] o.s.w.r.r.m.a.ControllerMethodResolver   : ControllerAdvice beans: none
+2024-10-24T12:53:33.155+05:30 DEBUG 15068 --- [InventoryService] [main] o.s.w.s.adapter.HttpWebHandlerAdapter    : enableLoggingRequestDetails='false': form data and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-10-24T12:54:54.411+05:30 DEBUG 26464 --- [InventoryService] [restartedMain] o.s.w.r.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-10-24T12:54:54.470+05:30 DEBUG 26464 --- [InventoryService] [restartedMain] o.s.w.r.r.m.a.ControllerMethodResolver   : ControllerAdvice beans: none
+2024-10-24T12:54:54.556+05:30 DEBUG 26464 --- [InventoryService] [restartedMain] o.s.w.s.adapter.HttpWebHandlerAdapter    : enableLoggingRequestDetails='false': form data and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-10-24T12:55:49.954+05:30 DEBUG 23940 --- [InventoryService] [restartedMain] o.s.w.r.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-10-24T12:55:50.002+05:30 DEBUG 23940 --- [InventoryService] [restartedMain] o.s.w.r.r.m.a.ControllerMethodResolver   : ControllerAdvice beans: none
+2024-10-24T12:55:50.064+05:30 DEBUG 23940 --- [InventoryService] [restartedMain] o.s.w.s.adapter.HttpWebHandlerAdapter    : enableLoggingRequestDetails='false': form data and headers will be masked to prevent unsafe logging of potentially sensitive data
