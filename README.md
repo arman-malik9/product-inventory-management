@@ -38,22 +38,28 @@ The system consists of two core services:
 - GET /inventory/{id} – Retrieve inventory details
 - PUT /inventory/{id} – Update stock count
 - DELETE /inventory/{id} – Remove inventory record
+  
+### Prerequisites
+- JDK 17 or above
+- Gradle
+- MongoDB
+- Redis 
 
 > ### Installation & Setup
 #### 1. Clone the repository:
 
-``` SHELL 
+```sh 
 git clone https://github.com/arman-malik9/product-management.git
 ```
 #### 2. Configure MongoDB and Redis in the application
 - Update **.properties file.**  
 ### 3. Run Inventory Service:
-``` SHELL
+```sh
 gradlew clean build
 gradlew bootRun
 ```
 ### 4. Run Product Service:
-``` SHELL
+```sh
 gradlew clean build
 gradlew bootRun
 ```
