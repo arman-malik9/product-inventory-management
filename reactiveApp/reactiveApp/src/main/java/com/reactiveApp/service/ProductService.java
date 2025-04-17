@@ -91,6 +91,7 @@ public class ProductService {
 	 * @param id
 	 * @return combine result of specific product and its inventory details.
 	 */
+	@Cacheable(value = "product")
 	public Mono<ProductWithInventoryDTO> getProductById(String id) {
 
 		Mono<ProductWithInventoryDTO> prodDTO = Mono.zip(productRepo.findById(id), client.getInventoryByProductId(id))
@@ -111,6 +112,7 @@ public class ProductService {
 	 * @param id
 	 * @return deleted product
 	 */
+	@CacheEvict(value = "product")
 	public Mono<ProductWithInventoryDTO> deleteById(String id) {
 		Mono<ProductWithInventoryDTO> prodDTO = Mono
 				.zip(productRepo.findById(id), client.deleteInventory(id), productRepo.deleteById(id))
@@ -135,6 +137,7 @@ public class ProductService {
 	 * @param id
 	 * @return updated product
 	 */
+	@CachePut(value = "product",key = "#a1")
 	public Mono<Product> updateProduct(ProductWithInventoryDTO updateProduct, String id) {
 
 		return productRepo.findById(id).flatMap(existingProduct -> {
