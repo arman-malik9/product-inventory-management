@@ -43,13 +43,16 @@ public class ProductController {
 
 	@GetMapping("/product/{id}")
 	@ResponseStatus(HttpStatus.OK)
+	@Cacheable(value = "product", key = "#id", condition = "#id!=null")
 	public Mono<ProductWithInventoryDTO> getProductById(@PathVariable("id") String id) {
 		return productService.getProductById(id);
 
 	}
 
+	@Hidden
 	@DeleteMapping("/product/{id}")
 	@ResponseStatus(HttpStatus.OK)
+	@CacheEvict(value = "product", key = "#id", condition = "#id!=null")
 	public Mono<ProductWithInventoryDTO> deleteById(@PathVariable("id") String id) {
 		return productService.deleteById(id);
 
@@ -57,6 +60,7 @@ public class ProductController {
 
 	@PutMapping("/product/{id}")
 	@ResponseStatus(HttpStatus.CREATED)
+	@CachePut(value = "product", key = "#a1")
 	public Mono<Product> updateProduct(@RequestBody ProductWithInventoryDTO updateProduct, @PathVariable("id") String id) {
 		return productService.updateProduct(updateProduct, id);
 
