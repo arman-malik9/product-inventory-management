@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ProductWithInventoryDTO {
+public class ProductWithInventoryDTO implements Serializable {
 	
 	private Product product;
 	private int stockCount;
