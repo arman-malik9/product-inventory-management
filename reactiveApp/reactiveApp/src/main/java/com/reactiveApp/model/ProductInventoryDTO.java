@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ProductInventoryDTO {	//Product Inventory Data Transfer Object
+public class ProductInventoryDTO implements Serializable {	//Product Inventory Data Transfer Object
 	
 	//private String id;
 	private int stockCount;
