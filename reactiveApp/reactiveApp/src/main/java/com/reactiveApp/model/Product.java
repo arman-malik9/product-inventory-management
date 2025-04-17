@@ -19,7 +19,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @Builder
 @ToString
-public class Product {
+public class Product implements Serializable{
 	@Id
 	private String id;
 	private String productName;
